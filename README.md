@@ -1,1 +1,0 @@
-# terneo-api
