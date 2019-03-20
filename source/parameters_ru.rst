@@ -1,91 +1,103 @@
 Список параметров
 ~~~~~~~~~~~~~~~~~
 
-0    uint32_t startTime //from 2000 datetime
-1    uint32_t endTime;  ///in seconds
-2    uint8_t                mode;///avtoMode=0, manualMode=1
-3    uint8_t                controlType;//floorControl=0, airControl=1, advancedControl=2
-4    int8_t                manualAirTemperature;     ///in   C ()
-5    int8_t                manualFloorTemperature; ///in   C
-6    int8_t                awayAirTemperature;     ///in   C
-7    int8_t                awayFloorTemperature;     ///in   C
-8    uint8_t                comfortAirTemperature;        ///in  C
-9    uint8_t                economAirTemperature;        ///in  C
-10     uint8_t                nightAirTemperature;        ///in  C
-11    uint8_t                comfortFloorTemperature;    ///in  C
-12    uint8_t                economFloorTemperature;        ///in  C
-13     uint8_t                nightFloorTemperature;        ///in  C
+Для получения набора всех доступных параметров конкретного устройства пошлите команду ``{"cmd":1}``, например ответ для терморегулятора AX с версией ПО 2.3:
 
-14    uint8_t                minTempAdvancedMode;       ///floor limit for temperature in advanced mode C
-15    uint8_t                maxTempAdvancedMode;    ///floor limit for temperature in advanced mode C
+.. code-block:: json
 
-16    uint8_t             numberOfWeekends;    ///no comment (0, 1, 2)
-17    uint8_t                power; /// от 0 до 1,50 кВт шаг 10 Вт, выше 20 Вт
-17    uint16_t                power; /// от 0 до 1,50 кВт шаг 10 Вт, выше 20 Вт
-18    uint8_t                sensorType; //th4k7Type, th6p8kType, th10kType, th12kType, th15kType, th33kType, th47kType,
-19    uint8_t                histeresis; //in 1/10 C (0...25,5)
-20    int8_t                airCorrection; /// 1/10 C 1-10
-21    int8_t                floorCorrection; /// 1/10 C 1-10
-22    uint8_t                 language;    ///no comment english, russian, german
-23    uint8_t                brightness; ///in percent/10
-24    uint8_t                contrast; ///in percent/5
-25    uint8_t                propKoef;/// в минутах 30 минутного цикла работы в пропорциональном режиме когда нет возможности измерять температуру
-26    int8_t                upperLimit;//in C for all controlTypes
-27    int8_t                lowerLimit;//in C for all controlTypes
-28   uint8_t                            number of schedule period // number
-29    uint8_t                tempTemperature;     ///in
-30   uint8_t                              xtest result; //bit array
+    {"sn":"058016000543464839373520000159","par":[[23,2,"6"],[114,7,"1"],[115,7,"0"],[0,6,"536112000"],[1,6,"536112000"],[2,2,"1"],[3,2,"0"],[4,1,"30"],[5,1,"30"],[6,1,"25"],[7,1,"5"],[18,2,"2"],[19,2,"10"],[21,1,"0"],[25,2,"15"],[26,1,"45"],[27,1,"5"],[28,2,"16"],[29,1,"0"],[17,4,"175"],[116,7,"0"],[117,7,"0"],[118,7,"0"],[121,7,"0"],[122,7,"0"],[124,7,"0"],[125,7,"0"]]}
 
-33   int8_t                            upperAirLimit;//in C
-34   int8_t                            lowerAirLimit;//in C
+``sn`` - серийный номер устройства
 
-35    Uint16                upperU;///верхний порог срабатывания по напряжению, in V
-36     Uint8                lowerU;///нижний порог срабатывания по напряжению, in V
-37    Uint8                upperP;///порог срабатывания по мощности, in 100W
-38    Uint16                upperI;///верхний порог срабатывания по току, in 1/10 A
-39    Uint16                middleI;///средний порог срабатывания по току, in 1/10 A
-40    Uint16                lowerI;///нижний порог срабатывания по току, in 1/10 A
-41     Uint16                tOnDelay;///задержка на включение реле в секундах
-42     Uint8                tOffDelay;///задержка на выключение реле при превышении верхнего предела по току или мощности, in seconds
-43     Uint8                middleITime;///задержка на выключение реле при превышении среднего предела тока, in 0.1 seconds
-44     Uint8                lowerITime;///задержка на выключение реле при токе ниже нижнего предела, in 0.1 seconds
-45    Uint16                lowVoltageTime;///длительность провала напряжения in 0.1 seconds
+``par`` - ключ обмена параметрами
 
-46     Int8                correctionsU;///поправка вольтметра, in Volts
-47     Int8                correctionsI;///поправка амперметра, in %
+Формат передачи - массив массивов. Первое число - номер параметра, второе его тип, третья - строка со значением параметра.
 
-48     Uint8                repTimes;///кол-во отлючений реле по току или напряжению до блокировки устройства, in times
-49     Uint8                powerType;///тип контролируемой мощности//0 - активная(Вт), 1 - реактивная(ВАр), 2 - полная(ВА)
-50     Uint8                showType;///тип отображаемого параметра//0 - ток, 1 - акт. мощн, 2 - реакт. мощн, 3 - полная мощн, 4 - косинус фи
-51     Uint8                sensorСontrolNumber;/// номер удалённого датчика для контроля температуры
+Например включить устройство и установить температуру пола в ручном режиме 27 С: 
 
-112     bool                proMode    ///профессиональная модель задержки на выключение по напряжению
-113     boo                voltageStableDelay///задержка на включение реле считает с момента нормализации напряжения
-114     bool                            androidBlock /// блокировка любых изменений настроек через offlineApi
-115     bool                            cloudBlock /// блокировка любых изменений настроек и перепрошивки через облако
+.. code-block:: json
 
-116     bool                useContactorControl /// нагрузка через контактор, только учёт электроэнергии
-117     bool                NCContactControl    /// инвертированное реле
+    {"sn":"058016000543464839373520000159","par":[[125,7,"0"],[5,1,"27"]]}
 
-118     bool                coolingControlWay /// режим нагрев/охлаждения
-119     bool                useExtendedPeriod /// использование расширенного расписания
-120     bool                useNightTemp      /// использование ночной температуры
-121     bool                preControl;       /// предварительный контроль
-122     bool                windowOpenControl;/// режим открытого окна
-123     bool                rtcStop;          ///остановка/запуск часов в конце/начале сезона
-124     bool                childrenLock;     /// защита от детей
-125     bool                powerOff;         ///выключение
-126    uint8_t                         rfAddress;        /// адрес рф                 (не актуально)
-127    int8_t                          rfCorrection;     //change offset cc1101 reg C (не актуально)
 
-Редактировать эту секцию
-Список типов параметров
-0 CStringType
-1 Int8
-2 Uint8
-3 Int16
-4 Uint16
-5 Int32
-6 Uint32
-7 Bool,
-8 Timetable
+.. important::
+   При изменении параметров устройства команда обязательно должна содержать ключ ``sn``
+
+.. table:: **Типы данных**
+   :widths: auto   
+
+   =====	=====
+   Номер	 Тип
+   =====	=====
+   0		 CStringType
+   1		 int8
+   2 		 uint8
+   3 		 int16
+   4 		 uint16
+   5  		 int32
+   6 		 uint32
+   7 		 bool
+   =====	=====
+
+
+
+
+.. table:: **Список параметров**
+   :widths: auto
+
+   ===== 	======		=======================		===========
+   Номер 	Тип   		Имя							Комментарий
+   ===== 	======		=======================		===========
+   0    	uint32		startTime					в секундах от 01.01.2000, время начала отъезда
+   1    	uint32		endTime						в секундах от 01.01.2000, время конца отъезда
+   2    	uint8		mode						режим работы: расписание=0, ручной=1
+   3    	uint8		controlType					режим контроля: по полу=0, по воздуху=1, расширенный=2
+   4    	int8		manualAir					в градусах С, уставка ручного режима по воздуху
+   5    	int8		manualFloorTemperature		в градусах С, уставка ручного режима по полу
+   6		int8		awayAirTemperature			в градусах С, уставка режима отъезда по воздуху
+   7    	int8		awayFloorTemperature		в градусах С, уставка режима отъезда по полу
+   14    	uint8		minTempAdvancedMode			в градусах С, минимальная температура пола в расширенном режиме
+   15    	uint8		maxTempAdvancedMode			в градусах С, максимальная температура пола в расширенном режиме
+   17    	uint8		power 						в у.е. (от 0 до 1,50 кВт шаг=10 Вт, выше шаг=20 Вт), подключенная мощность
+   17    	uint16		power 						в у.е. (от 0 до 1,50 кВт шаг=10 Вт, выше шаг=20 Вт), подключенная мощность
+   18    	uint8		sensorType 					тип подключенного аналогового датчика температуры: 4,7кОм=0, 6,8кОм=1, 10кОм=2, 12кОм=3, 15кОм=4, 33кОм=5, 47кОм=6
+   19    	uint8		histeresis 					в 1/10 градуса С, гистерезис
+   20    	int8		airCorrection 				в 1/10 градуса С, поправка датчика воздуха
+   21    	int8		floorCorrection 			в 1/10 градуса С, поправка датчика пола
+   23    	uint8		brightness					в у.е. (от 0 до 9) яркость 
+   25    	uint8		propKoef 					в минутах включенной нагрузки в пределах 30 минутного цикла работы пропорционального режима
+   26    	int8		upperLimit 					в градусах С, максимальное значение уставки пола
+   27    	int8		lowerLimit 					в градусах С, минимальное значение уставки пола
+   28   	uint8		maxSchedulePeriod 			максимальное число периодов расписания в сутки
+   29    	uint8		tempTemperature				в градусах С, температура временного режима	
+   33   	int8		upperAirLimit				в градусах С, максимальное значение уставки воздуха
+   34   	int8		lowerAirLimit				в градусах С, минимальное значение уставки воздуха
+   35    	uint16		upperU						в Вольтах, верхний порог срабатывания по напряжению
+   36     	uint8		lowerU						в Вольтах, нижний порог срабатывания по напряжению
+   37    	uint8		upperP						в 100Вт, порог срабатывания по мощности
+   38    	uint16		upperI						в 1/10 Ампера, верхний порог срабатывания по току
+   39    	uint16		middleI						в 1/10 Ампера, средний порог срабатывания по току
+   40    	uint16		lowerI						в 1/10 Ампера, нижний порог срабатывания по току
+   41     	uint16		tOnDelay 					в секундах, задержка на включение реле
+   42     	uint8		tOffDelay 					в секундах, задержка на выключение реле при превышении верхнего предела по току или мощности
+   43		uint8		middleITime 				в 1/10 секунды, задержка на выключение реле при превышении среднего предела тока
+   44     	uint8		lowerITime					в 1/10 секунды, задержка на выключение реле при токе ниже нижнего предела
+   45    	uint16		lowVoltageTime				в 1/10 секунды, длительность провала напряжения
+   46     	int8		correctionsU				в Вольтах, поправка вольтметра
+   47     	int8		correctionsI				в процентах, поправка амперметра
+   48     	uint8		repTimes					количество отлючений реле по току или напряжению до блокировки устройства
+   49     	uint8		powerType					тип контролируемой мощности: активная(Вт)=0, реактивная(ВАр)=1, полная(ВА)=2
+   50     	uint8		showType					тип отображаемого параметра: ток=0, акт. мощн.=1, реакт. мощн.=2, полная мощн.=3, косинус фи=4
+   51     	uint8		sensorСontrolNumber			номер удалённого датчика для контроля температуры   
+   112		bool 		proMode 					профессиональная модель задержки на выключение по напряжению
+   113		bool 		voltageStableDelay 			задержка на включение реле считает с момента нормализации напряжения
+   114		bool  		androidBlock 				блокировка любых изменений настроек через offlineApi
+   115		bool  		cloudBlock 					блокировка любых изменений настроек и перепрошивки через облако
+   116		bool  		useContactorControl 		нагрузка через контактор (только учёт электроэнергии)
+   117		bool  		NCContactControl 			инвертированное реле
+   118		bool  		coolingControlWay 			режим нагрев/охлаждения
+   121		bool  		preControl 					предварительный нагрев
+   122		bool  		windowOpenControl 			режим открытого окна	
+   124		bool  		childrenLock 				защита от детей
+   125		bool  		powerOff 					выключение   
+   =====	======		=======================		===========

@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'HmarexApi'
-copyright = '2019, starosta'
-author = 'starosta'
+project = 'hmarexApi'
+copyright = '2019, starostarf'
+author = 'starostarf'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = ''
+release = '0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -39,7 +39,6 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.githubpages',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -59,7 +58,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'ru'
+language = ru
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -102,7 +101,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'HmarexApidoc'
+htmlhelp_basename = 'hmarexApidoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -129,8 +128,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'HmarexApi.tex', 'HmarexApi Documentation',
-     'starosta', 'manual'),
+    (master_doc, 'hmarexApi.tex', 'hmarexApi Documentation',
+     'starostarf', 'manual'),
 ]
 
 
@@ -139,7 +138,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'hmarexapi', 'HmarexApi Documentation',
+    (master_doc, 'hmarexapi', 'hmarexApi Documentation',
      [author], 1)
 ]
 
@@ -150,8 +149,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'HmarexApi', 'HmarexApi Documentation',
-     author, 'HmarexApi', 'One line description of project.',
+    (master_doc, 'hmarexApi', 'hmarexApi Documentation',
+     author, 'hmarexApi', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -172,6 +171,3 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-
-# -- Extension configuration -------------------------------------------------

@@ -9,7 +9,7 @@ Introduction
 
    Introduction <intro_ru>
    Device finding <broadcast_ru>
-   Parameters <parameters_ru>
-   Schedule <schedule_ru>
-   Telemetry <telemetry_ru>
-   Errors <errors_ru>
+   Parameters <parameters>
+   Schedule <schedule>
+   Telemetry <telemetry>
+   Errors <errors>
