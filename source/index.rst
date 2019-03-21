@@ -10,3 +10,4 @@
    Параметры <parameters_ru>
    Расписание <schedule_ru>
    Телеметрия <telemetry_ru>
+   Безопасность <safety_ru>
