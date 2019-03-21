@@ -1,15 +1,12 @@
 **Hmarex API reference**
 ========================
 
-Introduction
-~~~~~~~~~~~~
-
 .. toctree::
    :maxdepth: 6
 
-   Introduction <intro_ru>
-   Device finding <broadcast_ru>
-   Parameters <parameters_ru>
-   Schedule <schedule_ru>
-   Telemetry <telemetry_ru>
-   Errors <errors_ru>
+   Введение <intro_ru>
+   Поиск устройств <broadcast_ru>
+   Команды <commands_ru>
+   Параметры <parameters_ru>
+   Расписание <schedule_ru>
+   Телеметрия <telemetry_ru>
