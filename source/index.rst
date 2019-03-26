@@ -1,13 +1,8 @@
-**Hmarex API reference**
-========================
+Select language
+~~~~~~~~~~~~~~~~
 
 .. toctree::
-   :maxdepth: 6
+	:maxdepth: 2
 
-   Введение <intro_ru>
-   Поиск устройств <broadcast_ru>
-   Команды <commands_ru>
-   Параметры <parameters_ru>
-   Расписание <schedule_ru>
-   Телеметрия <telemetry_ru>
-   Безопасность <safety_ru>
+	English <en/index>
+	Русский <ru/index>

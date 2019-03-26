@@ -5,14 +5,14 @@
 
 .. code-block:: json
 
-  {
-	"sn":"058016000543464839373520000159",
-	"hw":"ax",
-	"cloud":"true",
-	"connection":"cloudCon",
-	"wifi":"-71",
-	"display":"23.0"
-  }
+	{
+		"sn":"058016000543464839373520000159",
+		"hw":"ax",
+		"cloud":"true",
+		"connection":"cloudCon",
+		"wifi":"-71",
+		"display":"23.0"
+	}
 
 ``sn`` - серийный номер устройства
 

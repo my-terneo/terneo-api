@@ -27,12 +27,12 @@ To get all schedule of the device send command ``{"cmd":1}``, for example answer
 The argument is a two-dimensional array with a minimum of one period.
 
 Each period consists of pairs of values:
-* number of minutes since the beginning of the day
-* temperature is 1/10 degree
+  * number of minutes since the beginning of the day
+  * temperature is 1/10 degree
 
 The maximum number of periods is set by the `maxSchedulePeriod` parameter for version 2.3 is always = 16.
 
-For example set the 2nd period to 8:00 -> 28C, 18:00 -> 18C on Wednesday:
+For example, set two periods on Wednesday: *8:00 -> 28 °C*, *18:00 -> 18 °C*:
 
 .. code-block:: json
 
@@ -44,8 +44,9 @@ For example set the 2nd period to 8:00 -> 28C, 18:00 -> 18C on Wednesday:
    }
 
 .. important::
-	Нельзя в одном запросе передавать несколько дней расписания.
+	 It is impossible to transfer several days of the schedule in one request.
 
-..note::
-	В версии ПО 2.3 Температура не может быть больше чем параметр 26 (upperLimit), меньше чем параметр 27 (lowerLimit) для пола и не более 35 °С, не менее 5 °С для воздуха.
+.. note::
+	 In firmware version 2.3, temperature cannot be greater than parameter 26 (upperLimit), less than parameter 27 (lowerLimit) for the floor and cannot be greater than 35 °C, less than 5 °C for air.
+
 

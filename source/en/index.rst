@@ -1,0 +1,15 @@
+**Hmarex API reference**
+========================
+
+`Русская версия <../ru/index.html>`_
+
+.. toctree::
+   :maxdepth: 1
+
+   Introduction <intro>
+   Device finding <broadcast>
+   Command <commands>
+   Parameters <parameters>
+   Schedule <schedule>
+   Telemetry <telemetry>
+   Safety <safety>
