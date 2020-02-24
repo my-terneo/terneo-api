@@ -40,7 +40,11 @@ release = ''
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
+    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.httpexample'
 ]
+
+httpexample_scheme = 'https'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
