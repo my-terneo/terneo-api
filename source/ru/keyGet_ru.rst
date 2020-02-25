@@ -81,7 +81,7 @@
 
 * Пример:
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		GET /api/device/ HTTP/1.1
 		Host: my.hmarex.com
