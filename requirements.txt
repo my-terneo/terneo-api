@@ -1,0 +1,2 @@
+sphinxcontrib-httpexample == 0.10.3
+sphinxcontrib-httpdomain == 1.7.0

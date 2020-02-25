@@ -39,7 +39,7 @@
 
 **Пример:**
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		POST /api/login/ HTTP/1.1
 		Host: my.hmarex.com
