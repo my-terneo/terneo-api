@@ -12,7 +12,7 @@ You can get it through the server API only in 2 steps:
 `Getting an authorization token`
 ````````````````````````````````
 
-    **POST** my.hmarex.com/api/login/
+    **POST** https://my.hmarex.com/api/login/
 	
 .. code-block:: json
 	
@@ -52,7 +52,7 @@ You can get it through the server API only in 2 steps:
 `Getting list of device`
 ````````````````````````
     
-    **GET** my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``
+    **GET** https://my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``
 
 		**Parameters**
 			- ``access_token`` - authorization token in header

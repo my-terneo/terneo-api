@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MQTT &mdash; HmarexApi  documentation</title>
+  <title>MQTT &mdash; HmarexApi 0 documentation</title>
   
 
   
@@ -60,6 +60,10 @@
 
           
             
+            
+              <div class="version">
+                2.4
+              </div>
             
           
 
@@ -141,7 +145,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">﻿**Hmarex API reference**</a> &raquo;</li>
+          <li><a href="index.html">﻿ <strong>Hmarex API reference</strong></a> &raquo;</li>
         
       <li><strong>MQTT</strong></li>
     
@@ -173,6 +177,10 @@ MQTT server connection settings are available only via the device web-interface:
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code> - publication prefix for sending telemetry</p>
 <p><code class="docutils literal notranslate"><span class="pre">Subscribe</span> <span class="pre">path</span></code> - name of the way to subscribe to commands</p>
 <p><code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code> - device name</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If no authorization is configured on the MQTT server, the <code class="docutils literal notranslate"><span class="pre">User</span></code>/<code class="docutils literal notranslate"><span class="pre">Password</span></code> fields are ignored.</p>
+</div>
 <p>In software version 2.4 data are published every minute in the following topics:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">FloorTemp</span></code> - floor temperature sensor readings (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.1”</strong>) in °C as “xx.x”.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">protTemp</span></code> - readings of the internal overheat sensor (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.0”</strong>) in °C as “xx.x”.</p>

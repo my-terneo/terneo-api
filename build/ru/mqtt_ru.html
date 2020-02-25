@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>MQTT &mdash; HmarexApi  documentation</title>
+  <title>MQTT &mdash; HmarexApi 0 documentation</title>
   
 
   
@@ -59,6 +59,10 @@
 
           
             
+            
+              <div class="version">
+                2.4
+              </div>
             
           
 
@@ -171,7 +175,11 @@
 <p><code class="docutils literal notranslate"><span class="pre">QoS</span></code> - уровень качества обслуживания</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code> - префикс публикации для отправки телеметрии</p>
 <p><code class="docutils literal notranslate"><span class="pre">Subscribe</span> <span class="pre">path</span></code> - название пути для подписки на комманды</p>
-<p><code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code> - название устройства</p>
+<p><code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code> - имя устройства</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Если на сервере MQTT не настроена авторизация, то поля <code class="docutils literal notranslate"><span class="pre">User</span></code>/<code class="docutils literal notranslate"><span class="pre">Password</span></code> игнорируются.</p>
+</div>
 <p>В версии ПО 2.4 раз в минуту публикуются данные в следующие топики:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">floorTemp</span></code> - показания датчика температуры пола, <a class="reference external" href="telemetry_ru.html">телеметрия</a> <strong>“t.1”</strong> в °C строкой “xx.x”</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">protTemp</span></code> - показания внутреннего датчика перегрева, <a class="reference external" href="telemetry_ru.html">телеметрия</a> <strong>“t.0”</strong> в °C строкой “xx.x”</p>

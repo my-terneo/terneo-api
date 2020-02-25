@@ -1,5 +1,5 @@
-﻿**Hmarex API reference**
-=========================
+﻿ **Hmarex API reference**
+==========================
 
 `Русская версия <../ru/index.html>`_
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Расписание &mdash; HmarexApi  documentation</title>
+  <title>Расписание &mdash; HmarexApi 0 documentation</title>
   
 
   
@@ -60,6 +60,10 @@
 
           
             
+            
+              <div class="version">
+                2.4
+              </div>
             
           
 
@@ -164,7 +168,7 @@
             
   <div class="section" id="id1">
 <h1>Расписание<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p>Для получения расписания конкретного устройства пошлите команду <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:2}</span></code>, например ответ для терморегулятора AX с версией ПО 2.3 вида:</p>
+<p>Для получения расписания конкретного устройства отправьте запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:2}</span></code>. Например ответ для терморегулятора AX с версией ПО 2.3 вида:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
   <span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
@@ -191,7 +195,7 @@
 </dd>
 </dl>
 <p>Максимальное количество периодов задаётся параметром <code class="docutils literal notranslate"><span class="pre">maxSchedulePeriod</span></code> для версии 2.3 всегда=16.</p>
-<p>Например в среду установить 2 периода 8:00 -&gt; 28C, 18:00 -&gt; 18C:</p>
+<p>Например, в среду установить 2 периода 8:00 -&gt; 28C, 18:00 -&gt; 18C:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
  <span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
@@ -204,10 +208,10 @@
 <p class="admonition-title">Important</p>
 <p>Нельзя в одном запросе передавать несколько дней расписания.</p>
 </div>
-<dl class="simple">
-<dt>..note::</dt><dd><p>В версии ПО 2.3 Температура не может быть больше чем параметр 26 (upperLimit), меньше чем параметр 27 (lowerLimit) для пола и не более 35 °С, не менее 5 °С для воздуха.</p>
-</dd>
-</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>В версии ПО 2.3 Температура не может быть больше чем параметр 26 (upperLimit), меньше чем параметр 27 (lowerLimit) для пола и не более 35 °С, не менее 5 °С для воздуха.</p>
+</div>
 </div>
 
 

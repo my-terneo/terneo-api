@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** my.hmarex.com/api/login/
+    **POST** https://my.hmarex.com/api/login/
 	
 .. code-block:: json
 	
@@ -52,7 +52,7 @@
 `Получение списка устройств`
 ````````````````````````````
     
-    **GET** my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``"
+    **GET** https://my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``"
 
 		**Параметры**
 			- ``access_token`` - токен авторизации в заголовке			        

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Получение ключа TOTP &mdash; HmarexApi  documentation</title>
+  <title>Получение ключа TOTP &mdash; HmarexApi 0 documentation</title>
   
 
   
@@ -60,6 +60,10 @@
 
           
             
+            
+              <div class="version">
+                2.4
+              </div>
             
           
 
@@ -183,7 +187,7 @@
 <div class="section" id="id1">
 <h2><cite>Получение токена авторизации</cite><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><strong>POST</strong> my.hmarex.com/api/login/</p>
+<div><p><strong>POST</strong> <a class="reference external" href="https://my.hmarex.com/api/login/">https://my.hmarex.com/api/login/</a></p>
 </div></blockquote>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
         <span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;user@email.com&quot;</span><span class="p">,</span>
@@ -242,13 +246,19 @@
 </pre></div>
 </div>
 </div>
+<div class="http-example-python-requests docutils container" id="id7">
+<p class="caption"><span class="caption-text">python-requests</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">})</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div></blockquote>
 </div>
 <div class="section" id="id2">
 <h2><cite>Получение списка устройств</cite><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p><strong>GET</strong> my.hmarex.com/api/device/ –header “Authorization: Token <code class="docutils literal notranslate"><span class="pre">access_token</span></code>”</p>
+<div><p><strong>GET</strong> <a class="reference external" href="https://my.hmarex.com/api/device/">https://my.hmarex.com/api/device/</a> –header “Authorization: Token <code class="docutils literal notranslate"><span class="pre">access_token</span></code>”</p>
 <blockquote>
 <div><dl class="simple">
 <dt><strong>Параметры</strong></dt><dd><ul class="simple">
@@ -285,7 +295,7 @@
 <ul>
 <li><p>Пример:</p>
 <div class="http-example docutils container">
-<div class="http-example-http docutils container" id="id7">
+<div class="http-example-http docutils container" id="id8">
 <p class="caption"><span class="caption-text">http</span></p>
 <div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">/api/device/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Host</span><span class="o">:</span> <span class="l">my.hmarex.com</span>
@@ -295,21 +305,27 @@
 </pre></div>
 </div>
 </div>
-<div class="http-example-curl docutils container" id="id8">
+<div class="http-example-curl docutils container" id="id9">
 <p class="caption"><span class="caption-text">curl</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i https://my.hmarex.com/api/device/ -H <span class="s1">&#39;Accept-Language: en&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> -H <span class="s1">&#39;Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
 </pre></div>
 </div>
 </div>
-<div class="http-example-wget docutils container" id="id9">
+<div class="http-example-wget docutils container" id="id10">
 <p class="caption"><span class="caption-text">wget</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -S -O- https://my.hmarex.com/api/device/ --header<span class="o">=</span><span class="s1">&#39;Accept-Language: en&#39;</span> --header<span class="o">=</span><span class="s1">&#39;Content-Type: application/json&#39;</span> --header<span class="o">=</span><span class="s1">&#39;Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
 </pre></div>
 </div>
 </div>
-<div class="http-example-httpie docutils container" id="id10">
+<div class="http-example-httpie docutils container" id="id11">
 <p class="caption"><span class="caption-text">httpie</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http https://my.hmarex.com/api/device/ Accept-Language:en Content-Type:application/json Authorization:<span class="s1">&#39;Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="http-example-python-requests docutils container" id="id12">
+<p class="caption"><span class="caption-text">python-requests</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">})</span>
 </pre></div>
 </div>
 </div>

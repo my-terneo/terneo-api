@@ -9,7 +9,7 @@ Possibility of device control with enabled ``LAn`` locking (``androidBlock`` = *
 TOTP protocol is used for source authentication when sending commands to the device (**rfc4226**, **rfc6238**, Interval = 30second, Digit = 9). 
 For this purpose it is necessary to add two fields in front of the data fields:
 
-``time`` - time in seconds from 01.01.2000
+``time`` - time in seconds from 01.01.2000 00:00
 
 ``auth`` - calculated token.
  

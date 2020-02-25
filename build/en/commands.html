@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands &mdash; HmarexApi  documentation</title>
+  <title>Commands &mdash; HmarexApi 0 documentation</title>
   
 
   
@@ -60,6 +60,10 @@
 
           
             
+            
+              <div class="version">
+                2.4
+              </div>
             
           
 
@@ -141,7 +145,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">﻿**Hmarex API reference**</a> &raquo;</li>
+          <li><a href="index.html">﻿ <strong>Hmarex API reference</strong></a> &raquo;</li>
         
       <li>Commands</li>
     
@@ -170,6 +174,7 @@ Possible values:</p>
 <div><ul class="simple">
 <li><p>1 - <a class="reference external" href="parameters.html">parameters</a> request</p></li>
 <li><p>2 - <a class="reference external" href="schedule.html">schedule</a> request</p></li>
+<li><p>3 -  time getting request (available in firmware versiom 2.4 and higher)</p></li>
 <li><p>4 - <a class="reference external" href="telemetry.html">telemetry</a> request</p></li>
 </ul>
 </div></blockquote>
@@ -206,6 +211,15 @@ Possible values:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>Example <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:3}</span></code></p>
+<p>Answer:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+        <span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;634993283&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal notranslate"><span class="pre">time</span></code> - time in seconds from 01.01.2000</p>
 <p>Example <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:4}</span></code></p>
 <p>Answer:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

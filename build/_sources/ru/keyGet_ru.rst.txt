@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** my.hmarex.com/api/login/
+    **POST** https://my.hmarex.com/api/login/
 	
 .. code-block:: json
 	
@@ -39,7 +39,7 @@
 
 **Пример:**
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		POST /api/login/ HTTP/1.1
 		Host: my.hmarex.com
@@ -52,7 +52,7 @@
 `Получение списка устройств`
 ````````````````````````````
     
-    **GET** my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``"
+    **GET** https://my.hmarex.com/api/device/ --header "Authorization: Token ``access_token``"
 
 		**Параметры**
 			- ``access_token`` - токен авторизации в заголовке			        
@@ -81,7 +81,7 @@
 
 * Пример:
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		GET /api/device/ HTTP/1.1
 		Host: my.hmarex.com

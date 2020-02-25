@@ -6,6 +6,7 @@ Possible values:
 
 	* 1 - `parameters <parameters.html>`_ request
 	* 2 - `schedule <schedule.html>`_ request
+	* 3 -  time getting request (available in firmware versiom 2.4 and higher)	
 	* 4 - `telemetry <telemetry.html>`_ request
  
 
@@ -47,6 +48,19 @@ Answer:
             "6":[[480,300],[1380,250]]
           }
    }
+
+Example ``{"cmd":3}``
+
+Answer: 
+
+.. code-block:: json
+ 
+	{
+		"sn":"058016000543464839373520000159",
+		"time":"634993283"
+	}
+
+Where ``time`` - time in seconds from 01.01.2000 00:00
 
 Example ``{"cmd":4}``
 

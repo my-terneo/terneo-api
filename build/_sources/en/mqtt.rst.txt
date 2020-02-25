@@ -18,6 +18,9 @@ MQTT server connection settings are available only via the device web-interface:
 
 ``Client ID`` - device name
 
+.. note::
+		If no authorization is configured on the MQTT server, the ``User``/``Password`` fields are ignored.
+
 In software version 2.4 data are published every minute in the following topics:
 
 ``Publish prefix``/``Client ID``/``FloorTemp`` - floor temperature sensor readings (`temetry <telemetry.html>`_ **"t.1"**) in °C as "xx.x".
