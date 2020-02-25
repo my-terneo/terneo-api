@@ -21,7 +21,7 @@ You can get it through the server API only in 2 steps:
 			"password":"myPassword"
 		}
 
-**Parameters**
+**Parameters:**
 	- **email** - email of account
 	- **password** - account password
 

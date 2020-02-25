@@ -7,7 +7,7 @@
    :maxdepth: 1
 
    Introduction <intro>
-   Device finding <broadcast>
+   Device search <broadcast>
    Command <commands>
    Parameters <parameters>
    Schedule <schedule>
