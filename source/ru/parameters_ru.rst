@@ -75,7 +75,7 @@
    7    	1 (int8)	awayFloorTemperature		в °C, уставка режима отъезда по полу
    14    	2 (uint8)	minTempAdvancedMode			в °C, минимальная температура пола в расширенном режиме
    15    	2 (uint8)	maxTempAdvancedMode			в °C, максимальная температура пола в расширенном режиме
-   17    	4 (uint16)	power 						в у.е., **P=(power<=150)?(power*10):(1500+power*20)**, подключенная мощность
+   17    	4 (uint16)	power 						в у.е., P=(power<=150)?(power*10):(1500+power*20), подключенная мощность
    18    	2 (uint8)	sensorType 					тип подключенного аналогового датчика температуры:
    													 4,7кОм=0, 6,8кОм=1, 10кОм=2, 12кОм=3, 15кОм=4, 33кОм=5, 47кОм=6
    19    	2 (uint8)	histeresis 					в 1/10 °C, гистерезис
@@ -118,6 +118,7 @@
    116		7 (bool)  	useContactorControl 		нагрузка через контактор (только учёт электроэнергии)
    117		7 (bool)  	NCContactControl 			инвертированное реле
    118		7 (bool)  	coolingControlWay 			режим нагрев/охлаждения
+   120		7 (bool)  	useNightBright 				использование ночной яркости
    121		7 (bool)  	preControl 					предварительный нагрев
    122		7 (bool)  	windowOpenControl 			режим открытого окна	
    124		7 (bool)  	childrenLock 				защита от детей

@@ -60,7 +60,7 @@ Answer:
 		"time":"634993283"
 	}
 
-Where ``time`` - time in seconds from 01.01.2000	
+Where ``time`` - time in seconds from 01.01.2000 00:00
 
 Example ``{"cmd":4}``
 

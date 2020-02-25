@@ -71,7 +71,7 @@ For example, turn on the device and set floor temperature in manual mode to 27 �
    7        1 (int8)    awayFloorTemperature       in °C, уставка режима отъезда по полу
    14       2 (uint8)   minTempAdvancedMode        in °C, минимальная температура пола в расширенном режиме
    15       2 (uint8)   maxTempAdvancedMode        in °C, максимальная температура пола в расширенном режиме
-   17       4 (uint16)  power                      in a.e., **P=(power<=150)?(power*10):(1500+power*20)**, connected power
+   17       4 (uint16)  power                      in a.e., P=(power<=150)?(power*10):(1500+power*20), connected power
    18       2 (uint8)   sensorType                 type of connected temperature sensor: 
                                                     4,7kOhm=0, 6,8kOhm=1, 10kOhm=2, 12kOhm=3, 15kOhm=4, 33kOhm=5, 47kOhm=6
    19       2 (uint8)   histeresis                 in 1/10 °C, hysteresis
@@ -114,6 +114,7 @@ For example, turn on the device and set floor temperature in manual mode to 27 �
    116      7 (bool)    useContactorControl        load through contactor
    117      7 (bool)    NCContactControl           inverted relay
    118      7 (bool)    coolingControlWay          heat/cool mode
+   120      7 (bool)    useNightBright  	       activate using night bright
    121      7 (bool)    preControl                 preheat
    122      7 (bool)    windowOpenControl          open window control
    124      7 (bool)    childrenLock               children protect
