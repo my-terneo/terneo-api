@@ -24,9 +24,9 @@ copyright = '2019, DS Electronics'
 author = 'starosta'
 
 # The short X.Y version
-version = ''
+version = '2.4'
 # The full version, including alpha/beta/rc tags
-release = ''
+release = '0'
 
 
 # -- General configuration ---------------------------------------------------
