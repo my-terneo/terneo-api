@@ -2,11 +2,11 @@
 ========
 
 Starting from firmware version 2.4 there's a possibility to collect telemetry and manage some parameters via MQTT protocol.
-MQTT server connection settings are available only via the device web-interface:
+MQTT server connection settings are available only via the device web-interface, which is available at its local IP address:
 
 ``Host``/``Port`` - IP address and port of the MQTT server
 
-``Uer``/``Password`` - username and password to connect
+``User``/``Password`` - username and password to connect
 
 ``Keep alive`` - the maximum allowed period of time without data exchange
 
@@ -23,7 +23,9 @@ MQTT server connection settings are available only via the device web-interface:
 
 In software version 2.4 data are published every minute in the following topics:
 
-``Publish prefix``/``Client ID``/``FloorTemp`` - floor temperature sensor readings (`temetry <telemetry.html>`_ **"t.1"**) in °C as "xx.x".
+``Publish prefix``/``Client ID``/``floorTemp`` - floor temperature sensor readings (`temetry <telemetry.html>`_ **"t.1"**) in °C as "xx.x" (models with floor temperature sensor).
+
+``Publish prefix``/``Client ID``/``airTemp`` - air temperature sensor readings (`temetry <telemetry.html>`_ **"t.2"**) in °C as "xx.x" (models with air temperature sensor).
 
 ``Publish prefix``/``Client ID``/``protTemp`` - readings of the internal overheat sensor (`temetry <telemetry.html>`_ **"t.0"**) in °C as "xx.x".
 

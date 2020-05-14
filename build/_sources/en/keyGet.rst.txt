@@ -39,7 +39,7 @@ You can get it through the server API only in 2 steps:
 
 **Example:**
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		POST /api/login/ HTTP/1.1
 		Host: my.hmarex.com
@@ -81,7 +81,7 @@ Field ``totp_key`` in parameters of every devices has required key for TOTP toke
 
 * Example:
 
-  ..  http:example:: curl wget httpie
+  ..  http:example:: curl wget httpie python-requests
 
 		GET /api/device/ HTTP/1.1
 		Host: my.hmarex.com

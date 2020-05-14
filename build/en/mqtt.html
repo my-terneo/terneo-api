@@ -89,7 +89,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">English</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="broadcast.html">Device finding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast.html">Device search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="commands.html">Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="schedule.html">Schedule</a></li>
@@ -169,9 +169,9 @@
   <div class="section" id="mqtt">
 <h1><strong>MQTT</strong><a class="headerlink" href="#mqtt" title="Permalink to this headline">¶</a></h1>
 <p>Starting from firmware version 2.4 there’s a possibility to collect telemetry and manage some parameters via MQTT protocol.
-MQTT server connection settings are available only via the device web-interface:</p>
+MQTT server connection settings are available only via the device web-interface, which is available at its local IP address:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Host</span></code>/<code class="docutils literal notranslate"><span class="pre">Port</span></code> - IP address and port of the MQTT server</p>
-<p><code class="docutils literal notranslate"><span class="pre">Uer</span></code>/<code class="docutils literal notranslate"><span class="pre">Password</span></code> - username and password to connect</p>
+<p><code class="docutils literal notranslate"><span class="pre">User</span></code>/<code class="docutils literal notranslate"><span class="pre">Password</span></code> - username and password to connect</p>
 <p><code class="docutils literal notranslate"><span class="pre">Keep</span> <span class="pre">alive</span></code> - the maximum allowed period of time without data exchange</p>
 <p><code class="docutils literal notranslate"><span class="pre">QoS</span></code> - quality of service level</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code> - publication prefix for sending telemetry</p>
@@ -182,7 +182,8 @@ MQTT server connection settings are available only via the device web-interface:
 <p>If no authorization is configured on the MQTT server, the <code class="docutils literal notranslate"><span class="pre">User</span></code>/<code class="docutils literal notranslate"><span class="pre">Password</span></code> fields are ignored.</p>
 </div>
 <p>In software version 2.4 data are published every minute in the following topics:</p>
-<p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">FloorTemp</span></code> - floor temperature sensor readings (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.1”</strong>) in °C as “xx.x”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">floorTemp</span></code> - floor temperature sensor readings (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.1”</strong>) in °C as “xx.x” (models with floor temperature sensor).</p>
+<p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">airTemp</span></code> - air temperature sensor readings (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.2”</strong>) in °C as “xx.x” (models with air temperature sensor).</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">protTemp</span></code> - readings of the internal overheat sensor (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.0”</strong>) in °C as “xx.x”.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">setTemp</span></code> - setpoint temperature (<a class="reference external" href="telemetry.html">temetry</a> <strong>“t.5”</strong>) in °C as “xx.x”.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Publish</span> <span class="pre">prefix</span></code>/<code class="docutils literal notranslate"><span class="pre">Client</span> <span class="pre">ID</span></code>/<code class="docutils literal notranslate"><span class="pre">load</span></code> - load status <a class="reference external" href="telemetry.html">(temetry</a> <strong>“f.0”</strong>) by string “0” - off, “1” - on.</p>

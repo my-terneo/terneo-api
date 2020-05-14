@@ -72,8 +72,7 @@ For example, turn on the device and set floor temperature in manual mode to 27 �
    14       2 (uint8)   minTempAdvancedMode        in °C, минимальная температура пола в расширенном режиме
    15       2 (uint8)   maxTempAdvancedMode        in °C, максимальная температура пола в расширенном режиме
    17       4 (uint16)  power                      in a.e., P=(power<=150)?(power*10):(1500+power*20), connected power
-   18       2 (uint8)   sensorType                 type of connected temperature sensor: 
-                                                    4,7kOhm=0, 6,8kOhm=1, 10kOhm=2, 12kOhm=3, 15kOhm=4, 33kOhm=5, 47kOhm=6
+   18       2 (uint8)   sensorType                 type of connected temperature sensor: 4,7kOhm=0, 6,8kOhm=1, 10kOhm=2, 12kOhm=3, 15kOhm=4, 33kOhm=5, 47kOhm=6
    19       2 (uint8)   histeresis                 in 1/10 °C, hysteresis
    20       1 (int8)    airCorrection              in 1/10 °C, air temperature sensor correction
    21       1 (int8)    floorCorrection            in 1/10 °C, floor temperature sensor correction
