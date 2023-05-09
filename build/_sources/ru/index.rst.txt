@@ -1,4 +1,4 @@
-**Описание Hmarex API**
+**Описание Terneo API**
 ========================
 
 `English version <../en/index.html>`_

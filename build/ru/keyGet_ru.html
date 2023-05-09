@@ -1,91 +1,48 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Получение ключа TOTP &mdash; HmarexApi 0 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Получение ключа TOTP &mdash; Terneo API 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script src="../_static/sphinxcontrib-httpexample.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/sphinxcontrib-httpexample.css" type="text/css" />
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MQTT" href="mqtt_ru.html" />
     <link rel="prev" title="Безопасность" href="safety_ru.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../index.html" class="icon icon-home"> HmarexApi
           
-
-          
+          <a href="../index.html" class="icon icon-home">
+            Terneo API
           </a>
-
-          
-            
-            
               <div class="version">
-                2.4
+                2.5
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Русский</a><ul class="current">
@@ -106,72 +63,33 @@
 </li>
 </ul>
 
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">HmarexApi</a>
-        
+          <a href="../index.html">Terneo API</a>
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html"><strong>Описание Hmarex API</strong></a> &raquo;</li>
-        
-      <li><strong>Получение ключа TOTP</strong></li>
-    
-    
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><strong>Описание Terneo API</strong></a></li>
+      <li class="breadcrumb-item active"><strong>Получение ключа TOTP</strong></li>
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="../_sources/ru/keyGet_ru.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="totp">
-<h1><strong>Получение ключа TOTP</strong><a class="headerlink" href="#totp" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="totp">
+<h1><strong>Получение ключа TOTP</strong><a class="headerlink" href="#totp" title="Permalink to this heading"></a></h1>
 <p>Для безопасного управления устройством с аутентификацией по TOTP протоколу необходимо знать ключ,
 который представляет из себя последовательность из 16 байт. Он генерируется облаком в момент первого
 подключения и при каждой привязке к аккаунту.</p>
@@ -184,14 +102,14 @@
 </dd>
 </dl>
 </div></blockquote>
-<div class="section" id="id1">
-<h2><cite>Получение токена авторизации</cite><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2><cite>Получение токена авторизации</cite><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><strong>POST</strong> <a class="reference external" href="https://my.hmarex.com/api/login/">https://my.hmarex.com/api/login/</a></p>
 </div></blockquote>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-        <span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;user@email.com&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myPassword&quot;</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;user@email.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myPassword&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -204,59 +122,45 @@
 </dl>
 <p><strong>Ответ:</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-        <span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;9573e6a8e24b025fafbaf81dc2eccbc09b94d187&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;user_name&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;is_timezone_chosen&quot;</span><span class="p">:</span><span class="kc">true</span>
+<span class="w">        </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;9573e6a8e24b025fafbaf81dc2eccbc09b94d187&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;user_name&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;is_timezone_chosen&quot;</span><span class="p">:</span><span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">access_token</span></code> - искомый токен авторизации</p>
 <p><strong>Пример:</strong></p>
-<blockquote>
-<div><div class="http-example docutils container">
-<div class="http-example-http docutils container" id="id3">
-<p class="caption"><span class="caption-text">http</span></p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">POST</span> <span class="nn">/api/login/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="o">:</span> <span class="l">my.hmarex.com</span>
-<span class="na">Accept-Language</span><span class="o">:</span> <span class="l">en</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<p>http</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="n">Host</span><span class="p">:</span> <span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span>
+<span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
 
-<span class="p">{</span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo@gmail.com&quot;</span><span class="p">,</span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo2018&quot;</span><span class="p">}</span>
+<span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo@gmail.com&quot;</span><span class="p">,</span><span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo2018&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="http-example-curl docutils container" id="id4">
-<p class="caption"><span class="caption-text">curl</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i -X POST https://my.hmarex.com/api/login/ -H <span class="s1">&#39;Accept-Language: en&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> --data-raw <span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
+<p>curl</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept-Language: en&#39;</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">raw</span> <span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="http-example-wget docutils container" id="id5">
-<p class="caption"><span class="caption-text">wget</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -S -O- https://my.hmarex.com/api/login/ --header<span class="o">=</span><span class="s1">&#39;Accept-Language: en&#39;</span> --header<span class="o">=</span><span class="s1">&#39;Content-Type: application/json&#39;</span> --post-data<span class="o">=</span><span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
+<p>wget</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">S</span> <span class="o">-</span><span class="n">O</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="o">--</span><span class="n">header</span><span class="o">=</span><span class="s1">&#39;Accept-Language: en&#39;</span> <span class="o">--</span><span class="n">header</span><span class="o">=</span><span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="o">--</span><span class="n">post</span><span class="o">-</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
 </pre></div>
 </div>
-</div>
-<div class="http-example-httpie docutils container" id="id6">
-<p class="caption"><span class="caption-text">httpie</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;{</span>
-<span class="s1">  &quot;email&quot;: &quot;myterneo@gmail.com&quot;,</span>
-<span class="s1">  &quot;password&quot;: &quot;myterneo2018&quot;</span>
-<span class="s1">}&#39;</span> <span class="p">|</span> http POST https://my.hmarex.com/api/login/ Accept-Language:en Content-Type:application/json
+<p>httpie</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;{</span>
+<span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;myterneo@gmail.com&quot;</span><span class="p">,</span>
+<span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;myterneo2018&quot;</span>
+<span class="p">}</span><span class="s1">&#39; | http POST https://my.hmarex.com/api/login/ Accept-Language:en Content-Type:application/json</span>
 </pre></div>
 </div>
-</div>
-<div class="http-example-python-requests docutils container" id="id7">
-<p class="caption"><span class="caption-text">python-requests</span></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">})</span>
+<p>python-requests</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://my</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="id2">
-<h2><cite>Получение списка устройств</cite><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2><cite>Получение списка устройств</cite><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <blockquote>
 <div><p><strong>GET</strong> <a class="reference external" href="https://my.hmarex.com/api/device/">https://my.hmarex.com/api/device/</a> –header “Authorization: Token <code class="docutils literal notranslate"><span class="pre">access_token</span></code>”</p>
 <blockquote>
@@ -272,18 +176,18 @@
 <li><p>Ответ:</p>
 <blockquote>
 <div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-        <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;previous&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">18801</span><span class="p">,</span>
-                        <span class="nt">&quot;sn&quot;</span><span class="p">:</span> <span class="s2">&quot;1100150010434B58363539XXXXXXXX&quot;</span><span class="p">,</span>
-                        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Room1&quot;</span><span class="p">,</span>
-                        <span class="nt">&quot;&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span>
-                        <span class="s2">&quot;totp_key&quot;</span><span class="p">:</span> <span class="s2">&quot;BW4ERXAJXXXXXXXX&quot;</span>
-                <span class="p">}</span>
-        <span class="p">]</span>
+<span class="w">        </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18801</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1100150010434B58363539XXXXXXXX&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Room1&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="nt">&quot;&quot;</span>
+<span class="w">                        </span><span class="nt">&quot;totp_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BW4ERXAJXXXXXXXX&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
 
 <span class="p">}</span>
 </pre></div>
@@ -292,96 +196,69 @@
 </li>
 </ul>
 <p>Поле <code class="docutils literal notranslate"><span class="pre">totp_key</span></code> в параметрах каждого устройства содержит искомый ключ для генерации TOTP токена.</p>
-<ul>
-<li><p>Пример:</p>
-<div class="http-example docutils container">
-<div class="http-example-http docutils container" id="id8">
-<p class="caption"><span class="caption-text">http</span></p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="nf">GET</span> <span class="nn">/api/device/</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="o">:</span> <span class="l">my.hmarex.com</span>
-<span class="na">Accept-Language</span><span class="o">:</span> <span class="l">en</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
-<span class="na">Authorization</span><span class="o">:</span> <span class="l">Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187</span>
-</pre></div>
-</div>
-</div>
-<div class="http-example-curl docutils container" id="id9">
-<p class="caption"><span class="caption-text">curl</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -i https://my.hmarex.com/api/device/ -H <span class="s1">&#39;Accept-Language: en&#39;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> -H <span class="s1">&#39;Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="http-example-wget docutils container" id="id10">
-<p class="caption"><span class="caption-text">wget</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -S -O- https://my.hmarex.com/api/device/ --header<span class="o">=</span><span class="s1">&#39;Accept-Language: en&#39;</span> --header<span class="o">=</span><span class="s1">&#39;Content-Type: application/json&#39;</span> --header<span class="o">=</span><span class="s1">&#39;Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="http-example-httpie docutils container" id="id11">
-<p class="caption"><span class="caption-text">httpie</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http https://my.hmarex.com/api/device/ Accept-Language:en Content-Type:application/json Authorization:<span class="s1">&#39;Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="http-example-python-requests docutils container" id="id12">
-<p class="caption"><span class="caption-text">python-requests</span></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">,</span> <span class="p">:</span> <span class="p">})</span>
-</pre></div>
-</div>
-</div>
-</div>
-</li>
+<ul class="simple">
+<li><p>Пример:</p></li>
 </ul>
+<p>http</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="n">Host</span><span class="p">:</span> <span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span>
+<span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
+
+<span class="p">{</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo@gmail.com&quot;</span><span class="p">,</span><span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo2018&quot;</span><span class="p">}</span>
+</pre></div>
 </div>
+<p>curl</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept-Language: en&#39;</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">raw</span> <span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
+</pre></div>
 </div>
+<p>wget</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">S</span> <span class="o">-</span><span class="n">O</span><span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">my</span><span class="o">.</span><span class="n">hmarex</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">login</span><span class="o">/</span> <span class="o">--</span><span class="n">header</span><span class="o">=</span><span class="s1">&#39;Accept-Language: en&#39;</span> <span class="o">--</span><span class="n">header</span><span class="o">=</span><span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="o">--</span><span class="n">post</span><span class="o">-</span><span class="n">data</span><span class="o">=</span><span class="s1">&#39;{&quot;email&quot;: &quot;myterneo@gmail.com&quot;, &quot;password&quot;: &quot;myterneo2018&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>httpie</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;{</span>
+<span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;myterneo@gmail.com&quot;</span><span class="p">,</span>
+<span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;myterneo2018&quot;</span>
+<span class="p">}</span><span class="s1">&#39; | http POST https://my.hmarex.com/api/login/ Accept-Language:en Content-Type:application/json</span>
+</pre></div>
+</div>
+<p>python-requests</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://my.hmarex.com/api/login/&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span> <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;myterneo@gmail.com&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;myterneo2018&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mqtt_ru.html" class="btn btn-neutral float-right" title="MQTT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="safety_ru.html" class="btn btn-neutral float-left" title="Безопасность" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="safety_ru.html" class="btn btn-neutral float-left" title="Безопасность" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mqtt_ru.html" class="btn btn-neutral float-right" title="MQTT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, DS Electronics
-
-    </p>
+    <p>&#169; Copyright 2023, DS Electronics.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 Safety
 ~~~~~~
 
-Possibility of device control with enabled ``LAn`` locking (``androidBlock`` = **1**; ``bLc`` = **Lan**) is implemented in software version 2.4.
+Possibility of device control with enabled ``LAn`` locking (`Parameter <parameters.html>`_ 114 ``androidBlock`` = **1**; Device menu item ``bLc`` = **Lan**) is implemented in software version 2.4.
 
 .. note ::
 		If both locks are tuned on (``androidBlock`` = **1**, ``cloudBlock`` = **1**; ``bLc`` = **on**) device is locked for any control by network. Only buttons can change device parameters.

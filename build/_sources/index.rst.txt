@@ -1,5 +1,5 @@
 Select language
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. toctree::
 	:maxdepth: 2

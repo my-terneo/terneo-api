@@ -26,57 +26,27 @@ Parameter groups:
 		* ``0`` - internal overheating sensor
 		* ``1`` - floor
 		* ``2`` - air
-		* ``3`` - precipitation sensor
-		* ``4`` - external object
+		* ``3`` - reserved
+		* ``4`` - reserved
 		* ``5`` - current setting
-		* ``6`` - correction
-	* ``u`` - voltage
-		* ``0`` - maximum voltage during telemetry period, volts
-		* ``1`` - the minimum voltage during telemetry period, volts
-		* ``2`` - supply voltage 3.3V, 1/100 volt
-		* ``3`` - battery voltage, 1/10 volt
-		* ``4`` - upper threshold, volts
-		* ``5`` - lower threshold, volts
-		* ``6`` - medium voltage, volt
-	* ``i`` - current
-		* ``0`` - maximum current during telemetry period, 1/10 ampere
-		* ``1`` - average current during telemetry period, 1/10 ampere
-		* ``2`` - minimum current during telemetry period, 1/10 ampere
-		* ``3`` - upper current limit, 1/10 ampere
-		* ``4`` - average current limit, 1/10 ampere
-		* ``5`` - lower current limit, 1/10 ampere
-	* ``w`` - power
-		* ``0`` - upper power limit, watt
-		* ``1`` - maximum total load power during telemetry period, VA
-		* ``2`` - average total load power during telemetry period, VA
-		* ``3`` - minimum total load power during telemetry period, VA
-		* ``4`` - maximum cosine fi during telemetry period, 1/100 degree
-		* ``5`` - average cosine fi during telemetry period, 1/100 degree
-		* ``6`` - the minimum cosine fi during telemetry period, 1/100 degree
-	* ``r`` - resistance
-		* ``0`` - ground moisture sensor, 100 Ohm
-	* ``p`` - active and reactive parameters
-		* ``0`` - the maximum active load power during telemetry period, watts
-		* ``1`` - average active load power during telemetry period, watts
-		* ``2`` - the minimum active load power during telemetry period, watts
-		* ``3`` - maximum reactive load power during period of telemetry, VAR
-		* ``4`` - average reactive load power during telemetry period, VAR
-		* ``5`` - minimum reactive load power during telemetry period, VAR
+		* ``6`` - reserved
+		* ``7`` - microcontroller temperature
 	* ``m`` - modes
 		* ``0`` - control type: floor = 0, air = 1, extended = 2
 		* ``1`` - control type: schedule = 0, manual = 3, away = 4, temporary = 5
 		* ``2`` - the number of the current period of the schedule (the first period of Monday = 0, Tuesday = maxSchedulePeriod ...)
 		* ``3`` - blocking type: no blocking = 0, blocking changes from the cloud = 1, blocking changes from the local network = 2, both = 3
-		* ``4`` - controlled power type: active power = 0, reactive power = 1, apparent power = 2
+		* ``4`` - reserved
+		* ``5`` - heating mode (0 - heating, 1 - cooling)
 	* ``o`` - other parameters
 		* ``0`` - Wi-Fi signal strength in dBm
-		* ``1`` - the cause of the last reboot, mask: power off = 0x04, soft reset = 0x08, watchdog timer = 0x10, low voltage = 0x40
+		* ``1`` - the reason for the last reboot. Depending on the hardware version of the platform, there can be two types of values: First - mask: power off = 0x04, soft reset = 0x08, watchdog timer = 0x10, low voltage = 0x40. Second: 9 - software reboot due to low MK supply voltage; 3 - software reboot; 1 - power reset.
 	* ``par`` - duplication of some device parameters
 		* ``n`` - parameter number
 	* ``te`` - extra temperatures
 	* ``f`` - bit parameters
 		* ``0`` - load status
-		* ``1`` - waiting for load is being changed
+		* ``1`` - reserved
 		* ``2`` - floor restriction action
 		* ``3`` - no floor sensor
 		* ``4`` - short circuit floor sensor
@@ -85,12 +55,15 @@ Parameter groups:
 		* ``7`` - preheat algorithm is active 
 		* ``8`` - an open window function is active
 		* ``9`` - internal overheating
-		* ``10`` - the battery is low
-		* ``11`` - problems with the clock
+		* ``10`` - reserved
+		* ``11`` - reserved
 		* ``12`` - no overheat control
 		* ``13`` - proportional mode is active
 		* ``14`` - digital floor sensor is used
-		* ``15`` - restart by watchdog timer
+		* ``15`` - reserved
 		* ``16`` - power off state
-		* ``17`` - long time load on error
-
+		* ``17`` - reserved
+		* ``18`` - reserved
+		* ``19`` - reserved
+		* ``20`` - reserved
+		* ``21`` - problems with the zero crossing sensor

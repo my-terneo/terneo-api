@@ -19,12 +19,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'HmarexApi'
-copyright = '2019, DS Electronics'
+project = 'Terneo API'
+copyright = '2023, DS Electronics'
 author = 'starosta'
 
 # The short X.Y version
-version = '2.4'
+version = '2.5'
 # The full version, including alpha/beta/rc tags
 release = '0'
 
@@ -40,8 +40,7 @@ release = '0'
 # ones.
 extensions = [
     'sphinx.ext.githubpages',
-    'sphinxcontrib.httpdomain',
-    'sphinxcontrib.httpexample'
+    'sphinxcontrib.httpdomain'
 ]
 
 httpexample_scheme = 'https'
@@ -110,7 +109,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'HmarexApidoc'
+htmlhelp_basename = 'Terneo APIdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -137,7 +136,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'HmarexApi.tex', 'HmarexApi Documentation',
+    (master_doc, 'Terneo API.tex', 'Terneo API Documentation',
      'starosta', 'manual'),
 ]
 
@@ -147,7 +146,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'hmarexapi', 'HmarexApi Documentation',
+    (master_doc, 'Terneo API', 'Terneo API Documentation',
      [author], 1)
 ]
 
@@ -158,8 +157,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'HmarexApi', 'HmarexApi Documentation',
-     author, 'HmarexApi', 'One line description of project.',
+    (master_doc, 'Terneo API', 'Terneo API Documentation',
+     author, 'Terneo API', 'One line description of project.',
      'Miscellaneous'),
 ]
 

@@ -1,5 +1,5 @@
-﻿ **Hmarex API reference**
-==========================
+﻿ **Terneo API reference**
+=================================
 
 `Русская версия <../ru/index.html>`_
 
