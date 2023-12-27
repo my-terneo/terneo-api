@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** https://my.hmarex.com/api/login/
+    **POST** `https://my.hmarex.com/api/login/`
 	
 .. code-block:: json
 	
@@ -39,15 +39,16 @@
 
 **Пример:**
 
-  ..  http:example:: curl wget httpie python-requests
+  ..  code-block:: html
 
+	{
 		POST /api/login/ HTTP/1.1
 		Host: my.hmarex.com
 		Accept-Language: en
 		Content-Type: application/json
 		
 		{"email":"myterneo@gmail.com","password":"myterneo2018"}	
-
+	}
 
 `Получение списка устройств`
 ````````````````````````````
@@ -81,10 +82,12 @@
 
 * Пример:
 
-  ..  http:example:: curl wget httpie python-requests
+  ..  code-block:: html
 
+	{
 		GET /api/device/ HTTP/1.1
 		Host: my.hmarex.com
 		Accept-Language: en
 		Content-Type: application/json
 		Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187	
+	}
