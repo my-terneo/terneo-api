@@ -1,7 +1,7 @@
 Schedule
 ~~~~~~~~
 
-To get all schedule of the device send command ``{"cmd":1}``, for example answer for *AX* thermostat with firmware version 2.3:
+To get all schedule of the device send command ``{"cmd":2}``, for example answer for *AX* thermostat with firmware version 2.3:
 
 .. code-block:: json
 
@@ -22,7 +22,7 @@ To get all schedule of the device send command ``{"cmd":1}``, for example answer
 
 ``tt`` - schedule exchange key 
 
-``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6``, ``7`` - day number key, 0-monday. 
+``0``, ``1``, ``2``, ``3``, ``4``, ``5``, ``6`` - day number key, 0-monday. 
 
 The argument is a two-dimensional array with a minimum of one period.
 

@@ -92,7 +92,7 @@ Answer:
 
 Example ``{"cmd":5}``
 
-`Parameters <parameters.html>`_ reset request. Request must include «sn». When blocking changes from the local network ([114,7,»1»]) is set, the «auth» and «time» keys must be included in the request `Security  <safety.html>`_.
+`Parameters <parameters.html>`_ reset request. Request must include «sn».  When blocking from the local network ([114,7,"1"]) is active, the «auth» and «time» keys must be included in the request `Security  <safety.html>`_.
 
 Answer:
 
@@ -106,9 +106,17 @@ Answer:
          [122,7,"0"],[124,7,"0"],[125,7,"0"]]
 	}
 
+When blocking is active ([114,7,"1"]):
+
+Answer:
+
+.. code-block:: json
+
+	{"success":"block"}
+
 Example ``{"cmd":6}``
 
-`Schedule <schedule.html>`_ reset request reset request. Request must include «sn». When blocking changes from the local network ([114,7,»1»]) is set, the «auth» and «time» keys must be included in the request `Security  <safety.html>`_.
+`Schedule <schedule.html>`_ reset request reset request. Request must include «sn».  When blocking from the local network ([114,7,"1"]) is active, the «auth» and «time» keys must be included in the request `Security  <safety.html>`_.
 
 Answer:
 
@@ -127,7 +135,7 @@ Answer:
               }
 	}
 
-At [114,7,"1"]
+When blocking is active ([114,7,"1"]):
 
 Answer:
 
