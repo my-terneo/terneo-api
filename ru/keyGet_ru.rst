@@ -12,7 +12,7 @@
 `Получение токена авторизации`
 ``````````````````````````````
 
-    **POST** https://my.hmarex.com/api/login/
+    **POST** `https://my.hmarex.com/api/login/`
 	
 .. code-block:: json
 	
@@ -39,46 +39,16 @@
 
 **Пример:**
 
-http
+  ..  code-block:: html
 
-.. code-block:: python
-	
-	POST /api/login/ HTTP/1.1
-	Host: my.hmarex.com
-	Accept-Language: en	
-	Content-Type: application/json
-
-	{"email":"myterneo@gmail.com","password":"myterneo2018"}
-	
-curl
-
-.. code-block:: python
-
-	curl -i -X POST https://my.hmarex.com/api/login/ -H 'Accept-Language: en' -H 'Content-Type: application/json' --data-raw '{"email": "myterneo@gmail.com", "password": "myterneo2018"}'
-
-
-wget
-
-.. code-block:: python
-
-	wget -S -O- https://my.hmarex.com/api/login/ --header='Accept-Language: en' --header='Content-Type: application/json' --post-data='{"email": "myterneo@gmail.com", "password": "myterneo2018"}'
-
-
-httpie
-
-.. code-block:: python
-
-	echo '{
-	"email": "myterneo@gmail.com",
-	"password": "myterneo2018"
-	}' | http POST https://my.hmarex.com/api/login/ Accept-Language:en Content-Type:application/json
-
-python-requests
-
-.. code-block:: python
-
-	requests.post('https://my
-
+	{
+		POST /api/login/ HTTP/1.1
+		Host: my.hmarex.com
+		Accept-Language: en
+		Content-Type: application/json
+		
+		{"email":"myterneo@gmail.com","password":"myterneo2018"}	
+	}
 
 `Получение списка устройств`
 ````````````````````````````
@@ -111,41 +81,13 @@ python-requests
 Поле ``totp_key`` в параметрах каждого устройства содержит искомый ключ для генерации TOTP токена.
 
 * Пример:
-	
-http
 
-.. code-block:: python
-	
-	POST /api/login/ HTTP/1.1
-	Host: my.hmarex.com
-	Accept-Language: en
-	Content-Type: application/json
+  ..  code-block:: html
 
-	{"email":"myterneo@gmail.com","password":"myterneo2018"}
-	
-curl
-
-.. code-block:: python
-
-	curl -i -X POST https://my.hmarex.com/api/login/ -H 'Accept-Language: en' -H 'Content-Type: application/json' --data-raw '{"email": "myterneo@gmail.com", "password": "myterneo2018"}'
-
-wget
-
-.. code-block:: python
-
-	wget -S -O- https://my.hmarex.com/api/login/ --header='Accept-Language: en' --header='Content-Type: application/json' --post-data='{"email": "myterneo@gmail.com", "password": "myterneo2018"}'
-
-httpie
-
-.. code-block:: python
-
-	echo '{
-	"email": "myterneo@gmail.com",
-	"password": "myterneo2018"
-	}' | http POST https://my.hmarex.com/api/login/ Accept-Language:en Content-Type:application/json
-
-python-requests
-
-.. code-block:: python
-
-	requests.post('https://my.hmarex.com/api/login/', headers={'Accept-Language': 'en', 'Content-Type': 'application/json'}, json={'email': 'myterneo@gmail.com', 'password': 'myterneo2018'})
+	{
+		GET /api/device/ HTTP/1.1
+		Host: my.hmarex.com
+		Accept-Language: en
+		Content-Type: application/json
+		Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187	
+	}

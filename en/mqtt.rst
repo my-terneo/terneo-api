@@ -31,7 +31,7 @@ In software version 2.5 data are published every minute in the following topics:
 
 ``Publish prefix``/``Client ID``/``get``/``setTemp`` - setpoint temperature (`temetry <telemetry.html>`_ **"t.5"**) in °C as "xx.x".
 
-``Publish prefix``/``Client ID``/``get``/``powerOff`` - load state, `telemetry <telemetry.html>`_ **"f.0"** with string "0" - disabled, "1" - enabled
+``Publish prefix``/``Client ID``/``get``/``powerOff`` - device is turned off `(temetry <telemetry.html>`_ **"f.16"**) by string "0" - on, "1" - off.
 
 ``Publish prefix``/``Client ID``/``get``/``load`` - load status `(temetry <telemetry.html>`_ **"f.0"**) by string "0" - off, "1" - on.
 

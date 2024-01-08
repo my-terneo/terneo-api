@@ -1,8 +1,6 @@
 Introduction
 ~~~~~~~~~~~~~~~
 
-This document describes the protocol for the interaction of third-party applications with **DS Electronics** devices.
-
 For Wi-Fi devices with a firmware version higher than 2.3, direct control via a local network is available. Information is exchanged through POST requests at http://``dev_ip``/api.cgi, where ``dev_ip`` is the ip address of the device on the local network. To detect new devices on the local network `broadcast <broadcast.html>`_ packets is used. Data is presented in JSON format.
 
 .. important::

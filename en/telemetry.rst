@@ -30,7 +30,7 @@ Parameter groups:
 		* ``4`` - reserved
 		* ``5`` - current setting
 		* ``6`` - reserved
-		* ``7`` - microcontroller temperature
+		* ``7`` - microcontroller temperature		
 	* ``m`` - modes
 		* ``0`` - control type: floor = 0, air = 1, extended = 2
 		* ``1`` - control type: schedule = 0, manual = 3, away = 4, temporary = 5
@@ -67,3 +67,4 @@ Parameter groups:
 		* ``19`` - reserved
 		* ``20`` - reserved
 		* ``21`` - problems with the zero crossing sensor
+

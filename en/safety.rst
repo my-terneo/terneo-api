@@ -1,7 +1,7 @@
 Safety
 ~~~~~~
 
-Possibility of device control with enabled ``LAn`` locking (`Parameter <parameters.html>`_ 114 ``androidBlock`` = **1**; Device menu item ``bLc`` = **Lan**) is implemented in software version 2.4.
+Possibility of device control with enabled ``LAn`` locking (`Parameter <parameters.html>`_ 114 ``androidBlock`` = **1**; ``bLc`` = **Lan**) is implemented in software version 2.4.
 
 .. note ::
 		If both locks are tuned on (``androidBlock`` = **1**, ``cloudBlock`` = **1**; ``bLc`` = **on**) device is locked for any control by network. Only buttons can change device parameters.
@@ -15,7 +15,8 @@ For this purpose it is necessary to add two fields in front of the data fields:
  
  .. code-block:: json
  
-	{"sn":"058016000543464839373520000159",
+	{
+	 "sn":"058016000543464839373520000159",
 	 "time":"634929122",
 	 "auth":"672201707",
 	 "par":[[125,7,"0"], [23,2,"1"], [114,7,"1"]]
