@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Terneo API'
-copyright = '2023, DS Electronics'
+copyright = '2024, DS Electronics'
 author = 'starosta'
 
 # The short X.Y version
@@ -82,7 +82,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
