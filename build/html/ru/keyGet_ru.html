@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Получение ключа TOTP &mdash; HmarexApi 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MQTT" href="mqtt_ru.html" />
+    <link rel="prev" title="Безопасность" href="safety_ru.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HmarexApi
+          </a>
+              <div class="version">
+                2.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Русский</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_ru.html">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast_ru.html">Поиск устройств</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands_ru.html">Команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters_ru.html">Параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule_ru.html">Расписание</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telemetry_ru.html">Телеметрия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety_ru.html">Безопасность</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Получение ключа</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1"><cite>Получение токена авторизации</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2"><cite>Получение списка устройств</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt_ru.html">MQTT</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HmarexApi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><strong>Описание Hmarex API</strong></a></li>
+      <li class="breadcrumb-item active"><strong>Получение ключа TOTP</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ru/keyGet_ru.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="totp">
+<h1><strong>Получение ключа TOTP</strong><a class="headerlink" href="#totp" title="Permalink to this heading"></a></h1>
+<p>Для безопасного управления устройством с аутентификацией по TOTP протоколу необходимо знать ключ,
+который представляет из себя последовательность из 16 байт. Он генерируется облаком в момент первого
+подключения и при каждой привязке к аккаунту.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Получить его можно только через API сервера в 2 этапа:</dt><dd><ul class="simple">
+<li><p>получить токен авторизации для нужной учетной записи</p></li>
+<li><p>получить список устройств с параметрами, привязанных к данной учетной записи</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<section id="id1">
+<h2><cite>Получение токена авторизации</cite><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p><strong>POST</strong> <cite>https://{server_url}/api/login/</cite></p>
+</div></blockquote>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;user@email.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;myPassword&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Параметры:</strong></dt><dd><ul class="simple">
+<li><p><strong>email</strong> - почта зарегистрированного аккаунта</p></li>
+<li><p><strong>password</strong> - пароль от аккаунта</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Ответ:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;9573e6a8e24b025fafbaf81dc2eccbc09b94d187&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;user_name&quot;</span><span class="p">:</span><span class="s2">&quot;myterneo&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;is_timezone_chosen&quot;</span><span class="p">:</span><span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">access_token</span></code> - искомый токен авторизации</p>
+<p><strong>Пример:</strong></p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{
+        POST /api/login/ HTTP/1.1
+        Host: my.hmarex.com
+        Accept-Language: en
+        Content-Type: application/json
+
+        {&quot;email&quot;:&quot;myterneo@gmail.com&quot;,&quot;password&quot;:&quot;myterneo2018&quot;}
+}
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="id2">
+<h2><cite>Получение списка устройств</cite><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><p><strong>GET</strong> <a class="reference external" href="https://my.hmarex.com/api/device/">https://my.hmarex.com/api/device/</a> –header “Authorization: Token <code class="docutils literal notranslate"><span class="pre">access_token</span></code>”</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Параметры</strong></dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">access_token</span></code> - токен авторизации в заголовке</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<ul>
+<li><p>Ответ:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;results&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18801</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1100150010434B58363539XXXXXXXX&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Room1&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">&quot;&quot;</span><span class="p">:</span><span class="nt">&quot;&quot;</span>
+<span class="w">                        </span><span class="nt">&quot;totp_key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BW4ERXAJXXXXXXXX&quot;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Поле <code class="docutils literal notranslate"><span class="pre">totp_key</span></code> в параметрах каждого устройства содержит искомый ключ для генерации TOTP токена.</p>
+<ul>
+<li><p>Пример:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{
+        GET /api/device/ HTTP/1.1
+        Host: my.hmarex.com
+        Accept-Language: en
+        Content-Type: application/json
+        Authorization: Token 9573e6a8e24b025fafbaf81dc2eccbc09b94d187
+}
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="safety_ru.html" class="btn btn-neutral float-left" title="Безопасность" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mqtt_ru.html" class="btn btn-neutral float-right" title="MQTT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Hmarex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Телеметрия &mdash; HmarexApi 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Безопасность" href="safety_ru.html" />
+    <link rel="prev" title="Расписание" href="schedule_ru.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HmarexApi
+          </a>
+              <div class="version">
+                2.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Русский</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_ru.html">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast_ru.html">Поиск устройств</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands_ru.html">Команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters_ru.html">Параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule_ru.html">Расписание</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Телеметрия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety_ru.html">Безопасность</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyGet_ru.html">Получение ключа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt_ru.html">MQTT</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HmarexApi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><strong>Описание Hmarex API</strong></a></li>
+      <li class="breadcrumb-item active">Телеметрия</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ru/telemetry_ru.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Телеметрия<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>Телеметрия служит для получения текущего состояния устройства.
+Для получения телеметрии отправьте запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:4}</span></code>. Например ответ для терморегулятора AX с версией ПО 2.3 будет вида:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;t.0&quot;</span><span class="p">:</span><span class="s2">&quot;450&quot;</span><span class="p">,</span><span class="nt">&quot;t.1&quot;</span><span class="p">:</span><span class="s2">&quot;416&quot;</span><span class="p">,</span><span class="nt">&quot;t.5&quot;</span><span class="p">:</span><span class="s2">&quot;480&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;m.0&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;m.1&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="nt">&quot;m.2&quot;</span><span class="p">:</span><span class="s2">&quot;34&quot;</span><span class="p">,</span><span class="nt">&quot;m.3&quot;</span><span class="p">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.0&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;f.1&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.2&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.3&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.4&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.7&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.8&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.9&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.13&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.14&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.10&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.11&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.12&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;o.0&quot;</span><span class="p">:</span><span class="s2">&quot;-83&quot;</span><span class="p">,</span><span class="nt">&quot;o.1&quot;</span><span class="p">:</span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="nt">&quot;f.15&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;par.26&quot;</span><span class="p">:</span><span class="s2">&quot;45&quot;</span><span class="p">,</span><span class="nt">&quot;par.27&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - серийный номер устройства</p>
+<p><code class="docutils literal notranslate"><span class="pre">x.n</span></code> - ключ параметра, где <code class="docutils literal notranslate"><span class="pre">x</span></code> - группа параметров, <code class="docutils literal notranslate"><span class="pre">n</span></code> - номер в группе</p>
+<dl class="simple">
+<dt>Группы параметров:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">t</span></code> - температура в 1/16 °C</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - внутрений датчик перегрева</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - пола</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - воздуха</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - датчика осадков</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - внешнего объекта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - текущая уставка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - поправка</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">u</span></code> - напряжение</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - максимальное напряжение за период телеметрии, вольт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - минимальное напряжение за период телеметрии, вольт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - напряжения питания 3.3V, 1/100 вольта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - напряжение батарейки, 1/10 вольта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - верхний порог срабатывания, вольт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - нижний порог срабатывания, вольт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - среднее напряжение, вольт</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">i</span></code> - ток</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - максимальный ток за период телеметрии, 1/10 ампера</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - средний ток за период телеметрии, 1/10 ампера</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - минимальный ток за период телеметрии, 1/10 ампера</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - верхний предел тока, 1/10 ампера</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - средний предел тока, 1/10 ампера</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - нижний предел тока, 1/10 ампера</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">w</span></code> - мощность</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - верхний предел мощности, ватт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - максимальная полная мощность нагрузки за период телеметрии, ВА</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - средняя полная мощность нагрузки за период телеметрии, ВА</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - минимальная полная мощность нагрузки за период телеметрии, ВА</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - максимальный косинус фи за период телеметрии, 1/100 градуса</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - средний косинус фи за период телеметрии, 1/100 градуса</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - минимальный косинус фи за период телеметрии, 1/100 градуса</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">r</span></code> - сопротивление</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - грунтовый датчик влаги, в 100 Ом</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">p</span></code> - активные и реактивные параметры</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - максимальная активная мощность нагрузки за период телеметрии, ватт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - средняя активная мощность нагрузки за период телеметрии, ватт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - минимальная активная мощность нагрузки за период телеметрии, ватт</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - максимальная реактивная мощность нагрузки за период телеметрии, ВАР</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - средняя реактивная мощность нагрузки за период телеметрии, ВАР</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - минимальная реактивная мощность нагрузки за период телеметрии, ВАР</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">m</span></code> - режимы</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - тип контроля: пол = 0, воздух = 1, расширенный = 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - тип управления: по расписанию = 0, ручной = 3, отъезд = 4, временный = 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - номер текущего периода расписания (первый период понедельника = 0, вторника = maxSchedulePeriod…)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - тип блокировки: нет блокировок = 0, блокировка изменений из облака = 1, блокировка изменений из локальной сети = 2, обе = 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - тип контролируемой мощности: активная мощность = 0, реактивная мощность = 1, полная мощность = 2</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">o</span></code> - прочие параметры</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - уровень сигнала Wi-Fi в dBm (-127..128)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - причина последней перезагрузки, маска: выключение питания = 0x04, програмный сброс = 0x08, сторожевой таймер = 0x10, низкое напряжение = 0x40</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">par</span></code> - дублирование некоторых параметров устройства</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> - номер параметра</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">te</span></code> - дополнительная температура</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> - битовые параметры</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - состояние нагрузки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - ожидание включения нагрузки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - действие ограничения по полу</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - обрыв датчика пола</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - короткое замыкания датчика пола</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - обрыв датчика воздуха</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - к.з. датчика воздуха</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> - действие предварительного прогрева</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8</span></code> - действие ф-ции открытого окна</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">9</span></code> - внутренний перегрев</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> - села батарейка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code> - проблемы с часами</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">12</span></code> - нет контроля перегрева</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">13</span></code> - пропорциональный режим работы нагрузки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">14</span></code> - используется цифровой датчик пола</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">15</span></code> - перезагрузка по сторожевому таймеру</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">16</span></code> - устройство выключено</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">17</span></code> - ошибка длительной работы нагрузки</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="schedule_ru.html" class="btn btn-neutral float-left" title="Расписание" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="safety_ru.html" class="btn btn-neutral float-right" title="Безопасность" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Hmarex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

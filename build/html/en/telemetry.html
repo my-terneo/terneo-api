@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telemetry &mdash; HmarexApi 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Safety" href="safety.html" />
+    <link rel="prev" title="Schedule" href="schedule.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HmarexApi
+          </a>
+              <div class="version">
+                2.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">English</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast.html">Device search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters.html">Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule.html">Schedule</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html">Safety</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyGet.html">Key get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt.html">MQTT</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ru/index.html">Русский</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HmarexApi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">﻿ <strong>Hmarex API reference</strong></a></li>
+      <li class="breadcrumb-item active">Telemetry</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/en/telemetry.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="telemetry">
+<h1>Telemetry<a class="headerlink" href="#telemetry" title="Permalink to this heading"></a></h1>
+<p>Telemetry is used to obtain the current state of device.
+To get telemetry, send command <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:</span> <span class="pre">4}</span></code>, for example, the answer for AX thermostat with firmware version 2.3 will be:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;t.0&quot;</span><span class="p">:</span><span class="s2">&quot;450&quot;</span><span class="p">,</span><span class="nt">&quot;t.1&quot;</span><span class="p">:</span><span class="s2">&quot;416&quot;</span><span class="p">,</span><span class="nt">&quot;t.5&quot;</span><span class="p">:</span><span class="s2">&quot;480&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;m.0&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;m.1&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="nt">&quot;m.2&quot;</span><span class="p">:</span><span class="s2">&quot;34&quot;</span><span class="p">,</span><span class="nt">&quot;m.3&quot;</span><span class="p">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.0&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;f.1&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.2&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.3&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.4&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.7&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.8&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.9&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.13&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.14&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.10&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.11&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;f.12&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;o.0&quot;</span><span class="p">:</span><span class="s2">&quot;-83&quot;</span><span class="p">,</span><span class="nt">&quot;o.1&quot;</span><span class="p">:</span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="nt">&quot;f.15&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;par.26&quot;</span><span class="p">:</span><span class="s2">&quot;45&quot;</span><span class="p">,</span><span class="nt">&quot;par.27&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - device serial number</p>
+<p><code class="docutils literal notranslate"><span class="pre">x.n</span></code> is the parameter key, where <code class="docutils literal notranslate"><span class="pre">x</span></code> is a group of parameters, <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number in the group</p>
+<dl class="simple">
+<dt>Parameter groups:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">t</span></code> - temperature is 1/16 °C</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - internal overheating sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - floor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - air</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - current setting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> - microcontroller temperature</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">m</span></code> - modes</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - control type: floor = 0, air = 1, extended = 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - control type: schedule = 0, manual = 3, away = 4, temporary = 5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - the number of the current period of the schedule (the first period of Monday = 0, Tuesday = maxSchedulePeriod …)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - blocking type: no blocking = 0, blocking changes from the cloud = 1, blocking changes from the local network = 2, both = 3</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - heating mode (0 - heating, 1 - cooling)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">o</span></code> - other parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - Wi-Fi signal strength in dBm</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - the reason for the last reboot. Depending on the hardware version of the platform, there can be two types of values: First - mask: power off = 0x04, soft reset = 0x08, watchdog timer = 0x10, low voltage = 0x40. Second: 9 - software reboot due to low MK supply voltage; 3 - software reboot; 1 - power reset.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">par</span></code> - duplication of some device parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> - parameter number</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">te</span></code> - extra temperatures</p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> - bit parameters</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code> - load status</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> - floor restriction action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> - no floor sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4</span></code> - short circuit floor sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">5</span></code> - no air sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6</span></code> - short circuit air sensor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7</span></code> - preheat algorithm is active</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8</span></code> - an open window function is active</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">9</span></code> - internal overheating</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">11</span></code> - problems with the clock</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">12</span></code> - no overheat control</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">13</span></code> - proportional mode is active</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">14</span></code> - digital floor sensor is used</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">15</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">16</span></code> - power off state</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">17</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">18</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">19</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">20</span></code> - reserved</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">21</span></code> - problems with the zero crossing sensor</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="schedule.html" class="btn btn-neutral float-left" title="Schedule" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="safety.html" class="btn btn-neutral float-right" title="Safety" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Hmarex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

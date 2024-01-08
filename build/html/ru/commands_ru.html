@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Команды &mdash; HmarexApi 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Список параметров" href="parameters_ru.html" />
+    <link rel="prev" title="Поиск устройств" href="broadcast_ru.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HmarexApi
+          </a>
+              <div class="version">
+                2.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Русский</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_ru.html">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast_ru.html">Поиск устройств</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parameters_ru.html">Параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule_ru.html">Расписание</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telemetry_ru.html">Телеметрия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety_ru.html">Безопасность</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyGet_ru.html">Получение ключа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt_ru.html">MQTT</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HmarexApi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><strong>Описание Hmarex API</strong></a></li>
+      <li class="breadcrumb-item active">Команды</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ru/commands_ru.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Команды<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>Для получения параметров устройства служит ключ <code class="docutils literal notranslate"><span class="pre">cmd</span></code>.
+Возможные значения:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>1 - запрос на получение <a class="reference external" href="parameters_ru.html">параметров</a></p></li>
+<li><p>2 - запрос на получение <a class="reference external" href="schedule_ru.html">расписания</a></p></li>
+<li><p>3 - запрос на получение времени устройства (доступно в версии 2.4 и выше)</p></li>
+<li><p>4 - запрос на получение <a class="reference external" href="telemetry_ru.html">телеметрии</a></p></li>
+<li><p>5 - запрос cброса <a class="reference external" href="parameters_ru.html">параметров</a></p></li>
+<li><p>6 - запрос cброса <a class="reference external" href="schedule_ru.html">расписания</a></p></li>
+</ul>
+</div></blockquote>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:1}</span></code></p>
+<p>Получение <a class="reference external" href="parameters_ru.html">параметров</a></p>
+<p>Ответ:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;par&quot;</span><span class="p">:[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;25&quot;</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">],[</span><span class="mi">19</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;10&quot;</span><span class="p">],[</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">],[</span><span class="mi">25</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;15&quot;</span><span class="p">],[</span><span class="mi">26</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;45&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">27</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],[</span><span class="mi">28</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;16&quot;</span><span class="p">],[</span><span class="mi">29</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">17</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;175&quot;</span><span class="p">],[</span><span class="mi">114</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">115</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">116</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">117</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">118</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">121</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">122</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">124</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">125</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:2}</span></code></p>
+<p>Получение <a class="reference external" href="schedule_ru.html">расписания</a></p>
+<p>Ответ:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
+<span class="w">         </span><span class="nt">&quot;0&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;1&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;2&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;3&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;4&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;5&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">         </span><span class="nt">&quot;6&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]]</span>
+<span class="w">       </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:3}</span></code></p>
+<p>Получение времени устройства (доступно в версии 2.4 и выше):</p>
+<p>Ответ:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="s2">&quot;634993283&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Где <code class="docutils literal notranslate"><span class="pre">time</span></code> - время в секундах от 01.01.2000 00:00</p>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:4}</span></code></p>
+<p>Получение <a class="reference external" href="telemetry_ru.html">телеметрии</a></p>
+<p>Ответ:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">       </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;t.0&quot;</span><span class="p">:</span><span class="s2">&quot;450&quot;</span><span class="p">,</span><span class="nt">&quot;t.1&quot;</span><span class="p">:</span><span class="s2">&quot;416&quot;</span><span class="p">,</span><span class="nt">&quot;t.5&quot;</span><span class="p">:</span><span class="s2">&quot;480&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;m.0&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;m.1&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="nt">&quot;m.2&quot;</span><span class="p">:</span><span class="s2">&quot;34&quot;</span><span class="p">,</span><span class="nt">&quot;m.3&quot;</span><span class="p">:</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;f.0&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="nt">&quot;f.1&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.2&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.3&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;f.4&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.7&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.8&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.9&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;f.13&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.14&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.10&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;f.11&quot;</span><span class="p">:</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;f.12&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="nt">&quot;o.0&quot;</span><span class="p">:</span><span class="s2">&quot;-83&quot;</span><span class="p">,</span><span class="nt">&quot;o.1&quot;</span><span class="p">:</span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="nt">&quot;f.15&quot;</span><span class="p">:</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">&quot;par.26&quot;</span><span class="p">:</span><span class="s2">&quot;45&quot;</span><span class="p">,</span><span class="nt">&quot;par.27&quot;</span><span class="p">:</span><span class="s2">&quot;5&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:5}</span></code></p>
+<p>Запрос сброса <a class="reference external" href="parameters_ru.html">параметров</a> на значение по умолчанию. В запрос необходимо включить «sn». При установленной блокировки изменений из локальной сети ([114,7,”1”]) в запрос необходимо включить ключи «auth» и «time» (см. <a class="reference external" href="safety_ru.html">Безопасность</a>).</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Ответ:</p>
+<p>При ([114,7,”0”]) (см. <a class="reference external" href="safety_ru.html">Безопасность</a>):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;par&quot;</span><span class="p">:[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;25&quot;</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],[</span><span class="mi">18</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">],[</span><span class="mi">19</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;10&quot;</span><span class="p">],[</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">25</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;15&quot;</span><span class="p">],[</span><span class="mi">26</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;45&quot;</span><span class="p">],[</span><span class="mi">27</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],[</span><span class="mi">28</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;16&quot;</span><span class="p">],[</span><span class="mi">29</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">17</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;175&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">114</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">115</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">116</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">117</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">118</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">121</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="mi">122</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">124</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">125</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>При ([114,7,”1”]) (см. <a class="reference external" href="safety_ru.html">Безопасность</a>):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="s2">&quot;block&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:6}</span></code></p>
+<p>Запрос сброса <a class="reference external" href="schedule_ru.html">расписания</a> на значение по умолчанию. В запрос необходимо включить «sn». При установленной блокировки изменений из локальной сети ([114,7,”1”]) в запрос необходимо включить ключи «auth» и «time» (см. <a class="reference external" href="safety_ru.html">Безопасность</a>).</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;cmd&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Ответ:</p>
+<p>При ([114,7,”0”]) (см. <a class="reference external" href="safety_ru.html">Безопасность</a>):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;tt&quot;</span><span class="p">:{</span>
+<span class="w">        </span><span class="nt">&quot;0&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;1&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;2&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;3&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;4&quot;</span><span class="p">:[[</span><span class="mi">360</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">480</span><span class="p">,</span><span class="mi">250</span><span class="p">],[</span><span class="mi">1020</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1320</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;5&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]],</span>
+<span class="w">        </span><span class="nt">&quot;6&quot;</span><span class="p">:[[</span><span class="mi">480</span><span class="p">,</span><span class="mi">300</span><span class="p">],[</span><span class="mi">1380</span><span class="p">,</span><span class="mi">250</span><span class="p">]]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>При ([114,7,”1”]) (см. <a class="reference external" href="safety_ru.html">Безопасность</a>):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="s2">&quot;block&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="broadcast_ru.html" class="btn btn-neutral float-left" title="Поиск устройств" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="parameters_ru.html" class="btn btn-neutral float-right" title="Список параметров" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Hmarex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

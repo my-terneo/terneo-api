@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Список параметров &mdash; HmarexApi 0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Расписание" href="schedule_ru.html" />
+    <link rel="prev" title="Команды" href="commands_ru.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            HmarexApi
+          </a>
+              <div class="version">
+                2.5
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../en/index.html">English</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Русский</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_ru.html">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="broadcast_ru.html">Поиск устройств</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands_ru.html">Команды</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Параметры</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schedule_ru.html">Расписание</a></li>
+<li class="toctree-l2"><a class="reference internal" href="telemetry_ru.html">Телеметрия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety_ru.html">Безопасность</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyGet_ru.html">Получение ключа</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mqtt_ru.html">MQTT</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HmarexApi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><strong>Описание Hmarex API</strong></a></li>
+      <li class="breadcrumb-item active">Список параметров</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ru/parameters_ru.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>Список параметров<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>Для получения набора всех доступных параметров конкретного устройства отправьте запрос <code class="docutils literal notranslate"><span class="pre">{&quot;cmd&quot;:1}</span></code>. Например ответ для терморегулятора AX с версией ПО 2.3:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;par&quot;</span><span class="p">:[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;536112000&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;30&quot;</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;25&quot;</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">18</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;2&quot;</span><span class="p">],[</span><span class="mi">19</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;10&quot;</span><span class="p">],[</span><span class="mi">21</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">23</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;6&quot;</span><span class="p">],[</span><span class="mi">25</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;15&quot;</span><span class="p">],[</span><span class="mi">26</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;45&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">27</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;5&quot;</span><span class="p">],[</span><span class="mi">28</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;16&quot;</span><span class="p">],[</span><span class="mi">29</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">17</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;175&quot;</span><span class="p">],[</span><span class="mi">114</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="mi">115</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">116</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">117</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">118</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">121</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">122</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">124</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],</span>
+<span class="w">               </span><span class="p">[</span><span class="mi">125</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sn</span></code> - серийный номер устройства</p>
+<p><code class="docutils literal notranslate"><span class="pre">par</span></code> - ключ обмена параметрами</p>
+<p>Формат передачи - массив массивов. Первое число - номер параметра, второе его тип, третья - строка со значением параметра.</p>
+<p>Например включить устройство и установить температуру пола в ручном режиме 27 °C:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;sn&quot;</span><span class="p">:</span><span class="s2">&quot;058016000543464839373520000159&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;par&quot;</span><span class="p">:[[</span><span class="mi">125</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;0&quot;</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;27&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>При изменении параметров устройства команда обязательно должна содержать ключ <code class="docutils literal notranslate"><span class="pre">sn</span></code></p>
+</div>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text"><strong>Типы данных</strong></span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Номер</p></th>
+<th class="head"><p>Тип</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>CStringType</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>int8</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>uint8</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>int16</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>uint16</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>int32</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>uint32</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>bool</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text"><strong>Список параметров</strong></span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Num</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>6 (uint32)</p></td>
+<td><p>startAwayTime</p></td>
+<td><p>в секундах от 01.01.2000, время начала отъезда</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>6 (uint32)</p></td>
+<td><p>endAwayTime</p></td>
+<td><p>в секундах от 01.01.2000, время конца отъезда</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>mode</p></td>
+<td><p>режим работы: расписание=0, ручной=1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>controlType</p></td>
+<td><p>режим контроля: по полу=0, по воздуху=1, расширенный=2</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>manualAir</p></td>
+<td><p>в °C, уставка ручного режима по воздуху</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>manualFloorTemperature</p></td>
+<td><p>в °C, уставка ручного режима по полу</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>awayAirTemperature</p></td>
+<td><p>в °C, уставка режима отъезда по воздуху</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>awayFloorTemperature</p></td>
+<td><p>в °C, уставка режима отъезда по полу</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>minTempAdvancedMode</p></td>
+<td><p>в °C, минимальная температура пола в расширенном режиме</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>maxTempAdvancedMode</p></td>
+<td><p>в °C, максимальная температура пола в расширенном режиме</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>4 (uint16)</p></td>
+<td><p>power</p></td>
+<td><p>в у.е., P=(power&lt;=150)?(power*10):(1500+power*20), подключенная мощность</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>sensorType</p></td>
+<td><p>тип подключенного аналогового датчика температуры: 4,7кОм=0, 6,8кОм=1, 10кОм=2, 12кОм=3, 15кОм=4, 33кОм=5, 47кОм=6</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>histeresis</p></td>
+<td><p>в 1/10 °C, гистерезис</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>airCorrection</p></td>
+<td><p>в 1/10 °C, поправка датчика воздуха</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>floorCorrection</p></td>
+<td><p>в 1/10 °C, поправка датчика пола</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>brightness</p></td>
+<td><p>в у.е. (от 0 до 9) яркость</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>propKoef</p></td>
+<td><p>в минутах включенной нагрузки в пределах 30 минутного цикла работы пропорционального режима</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>upperLimit</p></td>
+<td><p>в °C, максимальное значение уставки пола</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>lowerLimit</p></td>
+<td><p>в °C, минимальное значение уставки пола</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>maxSchedulePeriod</p></td>
+<td><p>максимальное число периодов расписания в сутки</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>tempTemperature</p></td>
+<td><p>в °C, температура временного режима</p></td>
+</tr>
+<tr class="row-odd"><td><p>31</p></td>
+<td><p>2 (uint8)</p></td>
+<td><p>setTemperature</p></td>
+<td><p>в °C, температура уставки текущего режима (awayFloorTemperature | manualFloorTemperature | tempTemperature)</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>upperAirLimit</p></td>
+<td><p>в °C, максимальное значение уставки воздуха</p></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p>1 (int8)</p></td>
+<td><p>lowerAirLimit</p></td>
+<td><p>в °C, минимальное значение уставки воздуха</p></td>
+</tr>
+<tr class="row-even"><td><p>52</p></td>
+<td><p>4 (uint16)</p></td>
+<td><p>nightBrightStart</p></td>
+<td><p>в минутах от 00:00 время начала ночного снижения яркости</p></td>
+</tr>
+<tr class="row-odd"><td><p>53</p></td>
+<td><p>4 (uint16)</p></td>
+<td><p>nightBrightEnd</p></td>
+<td><p>в минутах от 00:00 время конца ночного снижения яркости</p></td>
+</tr>
+<tr class="row-even"><td><p>109</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>offButtonLock</p></td>
+<td><p>отключени автоматической блокировки сенсорных кнопок(Read-only)</p></td>
+</tr>
+<tr class="row-odd"><td><p>114</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>androidBlock</p></td>
+<td><p>блокировка любых изменений настроек через Api</p></td>
+</tr>
+<tr class="row-even"><td><p>115</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>cloudBlock</p></td>
+<td><p>блокировка любых изменений настроек и перепрошивки через облако</p></td>
+</tr>
+<tr class="row-odd"><td><p>117</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>NCContactControl</p></td>
+<td><p>инвертированное реле</p></td>
+</tr>
+<tr class="row-even"><td><p>118</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>coolingControlWay</p></td>
+<td><p>режим нагрев = 0; охлаждения = 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>120</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>useNightBright</p></td>
+<td><p>использование ночной яркости</p></td>
+</tr>
+<tr class="row-even"><td><p>121</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>preControl</p></td>
+<td><p>предварительный нагрев</p></td>
+</tr>
+<tr class="row-odd"><td><p>122</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>windowOpenControl</p></td>
+<td><p>режим открытого окна</p></td>
+</tr>
+<tr class="row-even"><td><p>124</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>childrenLock</p></td>
+<td><p>защита от детей</p></td>
+</tr>
+<tr class="row-odd"><td><p>125</p></td>
+<td><p>7 (bool)</p></td>
+<td><p>powerOff</p></td>
+<td><p>выключение</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Передаваемые температуры уставок ручного режима и отъезда не могут быть больше чем параметр 26 (upperLimit) и меньше чем параметр 27 (lowerLimit).</p>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="commands_ru.html" class="btn btn-neutral float-left" title="Команды" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="schedule_ru.html" class="btn btn-neutral float-right" title="Расписание" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Hmarex.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
